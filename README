@@ -1,0 +1,180 @@
+# 🔮 Vornskald - Rune Translator
+
+A modern web app for transliterating Latin characters into Germanic runes (Elder Futhark) and exploring rune meanings in an interactive way.
+
+## ✨ Overview
+
+Vornskald is a lightweight educational and experimental project focused on ancient Germanic runic writing systems. It allows users to:
+
+- **Convert Latin text into runes** (Elder Futhark) - Rune Transcriber
+- **Explore individual rune meanings** - Interactive Encyclopedia
+- **Learn symbolic and mythological associations** - Complete rune information
+
+This project is designed as a **MVP (Minimum Viable Product)** with a focus on simplicity, clarity, and extensibility.
+
+---
+
+## 🧠 Features
+
+### 🔤 Rune Transcriber (Home Page)
+- Real-time conversion of Latin text to runic script
+- Live preview of each rune's name and meaning
+- Copy-to-clipboard functionality
+- Responsive and intuitive UI
+
+Example: `ODIN` → `ᛟᛞᛁᚾ`
+
+### 📚 Rune Encyclopedia (Rune Page)
+- Interactive grid of all 24 Elder Futhark runes
+- Search by rune name, meaning, or Latin letter
+- Filter by keywords (wisdom, growth, journey, etc.)
+- Detailed information including:
+  - Rune name and character
+  - Latin equivalent
+  - Meaning
+  - Keywords/associations
+  - Symbolic interpretation
+  - Etymology
+
+### 🎨 Design Features
+- Dark aesthetic inspired by ancient stone carvings
+- Smooth animations using Framer Motion
+- Responsive layout for mobile and desktop
+- Amber/gold color scheme for runes (amber-600)
+- Stone-colored backgrounds (stone-900)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Next.js 14 (App Router)** – React framework for routing and SSR
+- **TypeScript** – Type safety and structured data modeling
+- **Tailwind CSS** – Utility-first styling for fast UI development
+- **Framer Motion** – Smooth animations and transitions
+- **React 18** – UI library
+
+---
+
+## 📁 Project Structure
+
+```
+vornskald/
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx              # Root layout with header/footer
+│   │   ├── globals.css             # Global styles
+│   │   ├── page.tsx                # Home page (transcriber)
+│   │   └── runes/
+│   │       └── page.tsx            # Encyclopedia page
+│   ├── components/
+│   │   ├── RuneTranscriber.tsx     # Transcriber component
+│   │   ├── RuneGrid.tsx            # Rune grid with search
+│   │   └── RuneCard.tsx            # Individual rune card
+│   ├── lib/
+│   │   ├── runes.ts                # 24 Elder Futhark runes dataset
+│   │   └── transliterator.ts       # Conversion logic
+│   └── types/
+│       └── rune.ts                 # TypeScript type definitions
+├── package.json
+├── tsconfig.json
+├── tailwind.config.js
+├── postcss.config.js
+├── next.config.js
+└── .eslintrc.json
+```
+
+---
+
+## 🔤 The 24 Runes of Elder Futhark
+
+Each rune has been meticulously documented with:
+- **Name** - Elder Futhark rune name (e.g., Ansuz, Berkana)
+- **Character** - Unicode rune symbol (e.g., ᚨ, ᛒ)
+- **Latin Equivalent** - Phonetic mapping (A, B, C, etc.)
+- **Meaning** - Primary significance
+- **Keywords** - Associated concepts (wisdom, growth, journey, protection, etc.)
+- **Symbolic Interpretation** - Deep cultural and spiritual meaning
+- **Etymology** - Proto-Germanic origins
+
+Example mappings:
+- A → ᚨ (Ansuz - Ancestor/Deity)
+- B → ᛒ (Berkana - Birch/Growth)
+- D → ᛞ (Dagaz - Day/Transformation)
+- O → ᛟ (Othala - Homeland/Inheritance)
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 16+ or higher
+- npm or yarn
+
+### 1. Install dependencies
+```bash
+npm install
+```
+
+### 2. Run development server
+```bash
+npm run dev
+```
+
+The app will be available at: **http://localhost:3088**
+
+### 3. Build for production
+```bash
+npm run build
+npm start
+```
+
+---
+
+## 📝 Available Scripts
+
+- `npm run dev` - Start development server (port 3088)
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
+
+---
+
+## 🎯 Future Enhancements
+
+- [ ] Additional runic systems (Younger Futhark, Anglo-Saxon Futhark)
+- [ ] Text-to-speech for rune pronunciation
+- [ ] Rune casting and divination feature
+- [ ] Save favorite rune combinations
+- [ ] Mobile app version
+- [ ] Dark/light theme toggle
+- [ ] Internationalization (i18n)
+
+---
+
+## 📜 License
+
+This project is open source and available under the MIT License.
+
+---
+
+## 🔗 Resources
+
+- [Elder Futhark - Wikipedia](https://en.wikipedia.org/wiki/Elder_Futhark)
+- [Framer Motion Docs](https://www.framer.com/motion/)
+- [Next.js 14 Documentation](https://nextjs.org/docs)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+---
+
+**Made with 🔮 for exploring ancient wisdom**
+
+🧠 Possível leitura de Vornskald
+🔹 “Vorn”
+
+Pode remeter a ideias como:
+
+Vorn / Vor- (lembrando alemão moderno “vor” = antes / diante / pré-”)
+sensação de “antigo”, “primordial”, “anterior”
+algo como “o que vem antes” ou “origem”
+
+👉 Interpretação simbólica: origem, ancestralidade, começo
