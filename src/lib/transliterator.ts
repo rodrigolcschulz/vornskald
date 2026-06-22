@@ -1,18 +1,30 @@
 import { runeMap, RUNES } from './runes';
 
 export function transliterateToRunes(text: string): string {
-  return text
-    .toUpperCase()
-    .split('')
-    .map((char) => {
-      // Map special combinations first (Th = ᚦ)
-      if (char === 'Þ' || char === 'þ') return 'ᚦ';
-      
-      // Map single characters
+  const upper = text.toUpperCase();
+  const result: string[] = [];
+  let i = 0;
+  while (i < upper.length) {
+    const char = upper[i];
+    // Thorn character → Thurisaz
+    if (char === 'Þ') {
+      result.push('ᚦ');
+      i++;
+    // TH digraph → Thurisaz
+    } else if (char === 'T' && upper[i + 1] === 'H') {
+      result.push('ᚦ');
+      i += 2;
+    // C → Kenaz (som de K)
+    } else if (char === 'C') {
+      result.push(runeMap['K'] || char);
+      i++;
+    } else {
       const rune = runeMap[char];
-      return rune || char; // Keep unmapped characters as-is
-    })
-    .join('');
+      result.push(rune || char);
+      i++;
+    }
+  }
+  return result.join('');
 }
 
 export function getRuneInfo(character: string) {

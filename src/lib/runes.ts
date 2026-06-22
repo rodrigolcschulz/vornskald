@@ -245,7 +245,9 @@ export const RUNES: Rune[] = [
 
 export const runeMap: Record<string, string> = RUNES.reduce(
   (acc, rune) => {
-    acc[rune.latinEquivalent.toUpperCase()] = rune.character;
+    rune.latinEquivalent.toUpperCase().split('/').forEach((key) => {
+      acc[key.trim()] = rune.character;
+    });
     return acc;
   },
   {} as Record<string, string>
